@@ -2003,7 +2003,7 @@ if not get_option('opengl').auto() or have_system or have_vhost_user_gpu
     # building it from subprojects/epoxy.wrap rather than leaving
     # CONFIG_OPENGL (and every core DisplaySurface GL field the new GUI
     # code needs) off entirely.
-    epoxy = dependency('epoxy', required: true)
+    epoxy = dependency('epoxy', required: false)
   endif
   # cc.has_header()'s `dependencies:` kwarg only accepts external
   # (pkg-config-found) dependency objects, not subproject-provided ones --
